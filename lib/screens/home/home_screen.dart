@@ -26,10 +26,11 @@ class HomeScreen extends StatelessWidget {
                 Container(
                   width: 150,
                   height: 150,
-                  color: Colors.green,
+                  child: Image.asset(Assets.logo),
+                  color: Color.fromARGB(255, 240, 240, 240),
                 ),
                 H(24),
-                TextComponent("Cow Predict")
+                TextComponent("Cow\nPredict")
               ],
             ),
             V(24),

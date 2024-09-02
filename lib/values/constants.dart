@@ -13,3 +13,7 @@ const defaultPadding = 16.0;
 const KEY_ISLOGGING = "is-logging";
 
 const BASE_URL = "http://10.0.2.2:5000";
+
+class Assets {
+  static const String logo = 'assets/logo.png';
+}
