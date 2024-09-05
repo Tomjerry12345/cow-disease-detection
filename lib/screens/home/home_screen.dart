@@ -2,7 +2,7 @@ import 'package:cow_predict/components/header/header_component.dart';
 import 'package:cow_predict/components/button/button_component.dart';
 import 'package:cow_predict/components/text/text_component.dart';
 import 'package:cow_predict/route/route_constants.dart';
-import 'package:cow_predict/values/constants.dart';
+import 'package:cow_predict/values/assets_utils.dart';
 import 'package:cow_predict/values/navigate_utils.dart';
 import 'package:cow_predict/values/position_utils.dart';
 import 'package:flutter/material.dart';

@@ -6,6 +6,7 @@ import 'package:cow_predict/components/text/text_component.dart';
 import 'package:cow_predict/components/textfield/dropdown_component.dart';
 import 'package:cow_predict/components/textfield/textfield_component.dart';
 import 'package:cow_predict/controller/predict_controller.dart';
+import 'package:cow_predict/values/constants.dart';
 import 'package:cow_predict/values/dialog_utils.dart';
 import 'package:cow_predict/values/output_utils.dart';
 import 'package:cow_predict/values/position_utils.dart';
@@ -64,7 +65,11 @@ class PredictScreen extends StatelessWidget {
                     H(16),
                     Expanded(
                       child: DropdownComponent(
+                        key: controller.keyDropdown,
                         items: ["Jantan", "Betina"],
+                        value: jenisKelaminController.text.isEmpty
+                            ? null
+                            : jenisKelaminController.text,
                         onSelectedItems: (value) {
                           jenisKelaminController.text = value;
                         },
@@ -150,6 +155,13 @@ class PredictScreen extends StatelessWidget {
                             }
 
                             String prediction = await controller.predict();
+
+                            final normalizedPrediction =
+                                prediction.trim().toLowerCase();
+                            final normalizedKeys = PENGOBATAN.map(
+                                (key, value) =>
+                                    MapEntry(key.toLowerCase(), value));
+
                             dialogShow(
                               context: context,
                               content: SizedBox(
@@ -170,7 +182,11 @@ class PredictScreen extends StatelessWidget {
                                     V(16),
                                     RowContent(context, "Penyakit", prediction),
                                     V(16),
-                                    RowContent(context, "Pengobatan", "test"),
+                                    RowContent(
+                                        context,
+                                        "Pengobatan",
+                                        normalizedKeys[normalizedPrediction] ??
+                                            "Pengobatan tidak tersedia"),
                                   ],
                                 ),
                               ),

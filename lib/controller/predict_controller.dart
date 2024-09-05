@@ -1,5 +1,6 @@
 import 'package:cow_predict/values/constants.dart';
 import 'package:cow_predict/values/output_utils.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
@@ -8,6 +9,8 @@ class PredictController extends GetxController {
   var checkedGejala = <String, bool>{}.obs;
   var gejalaValues = <int>[].obs;
   var searchQuery = ''.obs;
+
+  final GlobalKey<FormFieldState> keyDropdown = GlobalKey<FormFieldState>();
 
   // Daftar gejala
   final List<String> listGejala = [
@@ -128,6 +131,8 @@ class PredictController extends GetxController {
     for (var i = 0; i < listGejala.length; i++) {
       gejalaValues.add(0);
     }
+
+    keyDropdown.currentState?.reset();
   }
 
   List<String> get filteredGejala {

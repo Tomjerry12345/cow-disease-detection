@@ -1,4 +1,5 @@
 import 'package:cow_predict/values/constants.dart';
+import 'package:cow_predict/values/output_utils.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 
@@ -21,6 +22,7 @@ class DropdownComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DropdownButtonFormField2<String>(
+      key: key,
       isExpanded: true,
       decoration: InputDecoration(
         focusColor: Colors.white,
