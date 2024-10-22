@@ -10,7 +10,7 @@ class HasilPredictScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: HeaderComponent(
-        title: "Hasil predict",
+        title: "Hasil Prediksi", // "Hasil predict" diubah ke "Hasil Prediksi"
       ),
       body: SafeArea(
         child: Padding(
@@ -20,7 +20,7 @@ class HasilPredictScreen extends StatelessWidget {
               Row(
                 children: [
                   TextComponent(
-                    "Usia : ",
+                    "Usia : ", // Tetap dalam bahasa Indonesia
                     size: 18,
                   ),
                   H(16),

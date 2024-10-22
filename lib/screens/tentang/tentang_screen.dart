@@ -16,7 +16,7 @@ class TentangScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
-              "Tentang Aplikasi Cow Predict",
+              "Tentang Aplikasi Prediksi penyakit sapi",
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,

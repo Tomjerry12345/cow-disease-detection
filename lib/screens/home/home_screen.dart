@@ -30,7 +30,7 @@ class HomeScreen extends StatelessWidget {
                   color: Color.fromARGB(255, 240, 240, 240),
                 ),
                 H(24),
-                TextComponent("Cow\nPredict")
+                TextComponent("Prediksi \npenyakit\nsapi")
               ],
             ),
             V(24),
@@ -47,7 +47,7 @@ class HomeScreen extends StatelessWidget {
             const Spacer(),
             Container(
               width: 300,
-              child: ButtonComponent("Predict", onPressed: () {
+              child: ButtonComponent("Prediksi", onPressed: () {
                 navigatePushNamed(predictScreenRoute);
               }),
             ),
